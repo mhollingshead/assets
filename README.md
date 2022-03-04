@@ -1,11 +1,6 @@
 *Raw files for use outside of github*
 
 ```javascript
-const n = 5;
-const hypercube = new NCube(n);
-
-setInterval(() => {
-  hypercube.rotate(1 / Math.PI**3);
-  hypercube.edges.forEach(edge => draw(edge));
-}, 20);
+const nCube = new NCube(4, [-120/2, 120/2]);
+nCube.rotate(360 * Math.PI / 180, [[0, 1], [1, 2], [3, 1]]);
 ```
