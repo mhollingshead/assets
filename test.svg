@@ -1,0 +1,84 @@
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'
+         width='100%' height='100%' viewPort='0 0 1000 1000'>
+         <style>.extension-block * {box-sizing: border-box;padding: 0;margin: 0;}.lang-figure {padding:16px 16px 4px 16px; margin-right: 0; margin-left: 0;}.lang-list {list-style: none;display: flex;flex-wrap: wrap;width: 100%}.lang-item {display: flex;align-items: center;margin-right: 24px;margin-bottom: 8px}.lang-dot {width:8px;height:8px;border-radius:50%;margin-right:8px}.lang-label {font-size: 12px;font-weight: 600;margin-right: 4px}.lang-percent {font-size: 12px;margin-right: 4px;}.lang-bar {height: 8px;width: 100%;border-radius: 4px;margin-bottom: 8px;display: flex;justify-content: space-between; overflow: hidden}.bar-language {height: 8px;min-width: 2px}</style>
+         <style>
+           figure {
+             width: 900px;
+             height: 90px;
+           }
+           figure * {
+               font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+           }
+           
+           .bar-language {
+               animation: animateWidth 1s;
+           }
+
+           @keyframes animateWidth {
+               0% {
+                   width: 0%;
+               }
+               100% {
+                   width: 100%;
+               }
+           }
+         </style>
+         <foreignObject x="0" y="0" width="900" height="90">
+           <div class="extension-block" xmlns="http://www.w3.org/1999/xhtml">
+           <figure class="lang-figure Box" xmlns="http://www.w3.org/1999/xhtml">
+            <div class="lang-bar" xmlns="http://www.w3.org/1999/xhtml">
+              <div xmlns="http://www.w3.org/1999/xhtml" class="bar-language" style="background-color: #f1e05a; width: calc(46.742863082316916% - (2px * 7 / 8));"></div>
+              <div xmlns="http://www.w3.org/1999/xhtml" class="bar-language" style="background-color: #e34c26; width: calc(24.93683612973379% - (2px * 7 / 8));"></div>
+              <div xmlns="http://www.w3.org/1999/xhtml" class="bar-language" style="background-color: #563d7c; width: calc(15.067281514973436% - (2px * 7 / 8));"></div>
+              <div xmlns="http://www.w3.org/1999/xhtml" class="bar-language" style="background-color: #c6538c; width: calc(6.173968490023706% - (2px * 7 / 8));"></div>
+              <div xmlns="http://www.w3.org/1999/xhtml" class="bar-language" style="background-color: #3572A5; width: calc(3.251939890382701% - (2px * 7 / 8));"></div>
+              <div xmlns="http://www.w3.org/1999/xhtml" class="bar-language" style="background-color: #000080; width: calc(1.7946734467884369% - (2px * 7 / 8));"></div>
+              <div xmlns="http://www.w3.org/1999/xhtml" class="bar-language" style="background-color: #f34b7d; width: calc(1.2941597406283607% - (2px * 7 / 8));"></div>
+              <div xmlns="http://www.w3.org/1999/xhtml" class="bar-language" style="background-color: #cccccc; width: calc(0.7382777051526527% - (2px * 7 / 8));"></div>
+            </div>
+            <ul class="lang-list">
+              <li class="lang-item">
+                <div class="lang-dot" style="background-color: #f1e05a;"></div>
+                <div class="lang-label">JavaScript</div>
+                <div class="lang-percent color-text-secondary">46.7%</div>
+              </li>
+              <li class="lang-item">
+                <div class="lang-dot" style="background-color: #e34c26;"></div>
+                <div class="lang-label">HTML</div>
+                <div class="lang-percent color-text-secondary">24.9%</div>
+              </li>
+              <li class="lang-item">
+                <div class="lang-dot" style="background-color: #563d7c;"></div>
+                <div class="lang-label">CSS</div>
+                <div class="lang-percent color-text-secondary">15.1%</div>
+              </li>
+              <li class="lang-item">
+                <div class="lang-dot" style="background-color: #c6538c;"></div>
+                <div class="lang-label">SCSS</div>
+                <div class="lang-percent color-text-secondary">6.2%</div>
+              </li>
+              <li class="lang-item">
+                <div class="lang-dot" style="background-color: #3572A5;"></div>
+                <div class="lang-label">Python</div>
+                <div class="lang-percent color-text-secondary">3.3%</div>
+              </li>
+              <li class="lang-item">
+                <div class="lang-dot" style="background-color: #000080;"></div>
+                <div class="lang-label">Lua</div>
+                <div class="lang-percent color-text-secondary">1.8%</div>
+              </li>
+              <li class="lang-item">
+                <div class="lang-dot" style="background-color: #f34b7d;"></div>
+                <div class="lang-label">C++</div>
+                <div class="lang-percent color-text-secondary">1.3%</div>
+              </li>
+              <li class="lang-item">
+                <div class="lang-dot" style="background-color: #cccccc;"></div>
+                <div class="lang-label">Other</div>
+                <div class="lang-percent color-text-secondary">0.7%</div>
+              </li>
+            </ul>
+          </figure>
+          </div>
+         </foreignObject>
+    </svg>
