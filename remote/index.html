@@ -165,9 +165,11 @@
 
         onValue(tvHandshakeRef, () => {
             setTimeout(() => {
-                set(remoteHandshakeRef, new Date() * 1)
+                set(remoteHandshakeRef, new Date() * 1);
             }, 6000);
         });
+
+        set(remoteHandshakeRef, new Date() * 1);
     </script>
 </body>
 </html>
