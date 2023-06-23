@@ -159,17 +159,6 @@
                 broadcastInput(e.target.id);
             });
         });
-
-        const tvHandshakeRef = ref(database, 'tv-handshake');
-        const remoteHandshakeRef = ref(database, 'remote-handshake')
-
-        onValue(tvHandshakeRef, () => {
-            setTimeout(() => {
-                set(remoteHandshakeRef, new Date() * 1);
-            }, 6000);
-        });
-
-        set(remoteHandshakeRef, new Date() * 1);
     </script>
 </body>
 </html>
