@@ -6,7 +6,7 @@
     <link rel="apple-touch-icon" href="./assets/michael-tv-icon.png">
     <link rel="icon" href="./assets/michael-tv-icon.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#111111">
     <title>Michael TV</title>
     <meta>
     <style>
@@ -150,8 +150,7 @@
 
         const broadcastInput = (input) => {
             set(ref(database, 'input'), {
-                key: input,
-                timestamp: new Date() * 1
+                key: `${input}-${new Date() * 1}`
             });
         }
 
