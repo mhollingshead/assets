@@ -149,9 +149,7 @@
         const database = getDatabase(app);
 
         const broadcastInput = (input) => {
-            set(ref(database, 'input'), {
-                key: `${input}-${new Date() * 1}`
-            });
+            set(ref(database, 'input'), `${input}-${new Date() * 1}`);
         }
 
         Array.from(document.querySelectorAll('button')).forEach(button => {
