@@ -132,7 +132,7 @@
     </main>
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
-        import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+        import { getDatabase, ref, onValue, set } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
 
         const firebaseConfig = {
             apiKey: "AIzaSyB5M61LyQp9RFLfLpOCzHGWCEmgPt0RRCE",
@@ -148,14 +148,25 @@
 
         const database = getDatabase(app);
 
+        const inputRef = ref(database, 'input');
+
         const broadcastInput = (input) => {
-            set(ref(database, 'input'), `${input}-${new Date() * 1}`);
+            set(inputRef, `${input}-${new Date() * 1}`);
         }
 
         Array.from(document.querySelectorAll('button')).forEach(button => {
             button.addEventListener('click', e => {
                 broadcastInput(e.target.id);
             });
+        });
+
+        const tvHandshakeRef = ref(database, 'tv-handshake');
+        const remoteHandshakeRef = ref(database, 'remote-handshake')
+
+        onValue(tvHandshakeRef, () => {
+            setTimeout(() => {
+                set(remoteHandshakeRef, new Date() * 1)
+            }, 6000);
         });
     </script>
 </body>
