@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="apple-touch-icon" href="/assets/michael-tv-icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Michael TV</title>
+    <meta>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        :root {
+            --bg-primary: #111;
+            --bg-secondary: #222;
+            --bg-tertiary: #333;
+            --bg-primary-alpha: #111111ee;
+            --bg-secondary-alpha: #272727;
+            --bg-tertiary-alpha: #333333cc;
+            --bg-alt: #070707;
+            --bg-alt-alpha: #070707e7;
+            --fg-primary: #fff;
+            --fg-secondary: #aaa;
+            --fg-tertiary: #fff;
+            --hl-primary: #2196f3;
+            --hl-secondary: #2196f366;
+        }
+        body {
+            background-color: var(--bg-primary);
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            width: 100vw;
+            padding-top: 12rem;
+        }
+        .wheel {
+            width: 100%;
+            border-radius: 0.5rem;
+        }
+        .button-row {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+        .button-wheel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            width: 100%;
+            height: 5rem;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            color: var(--fg-primary);
+            font-weight: 600;
+        }
+        .button-wheel:nth-child(1) {
+            align-items: flex-start;
+        }
+        .button-wheel:nth-child(3) {
+            align-items: flex-end;
+        }
+        .button-small {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 2rem;
+            border: none;
+            outline: none;
+            color: var(--fg-primary);
+        }
+        button svg {
+            fill: var(--fg-primary);
+            width: 1.5rem;
+            height: 1.5rem;
+            pointer-events: none;
+        }
+
+        .wheel, .button-small {
+            background: linear-gradient(135deg, rgba(34,34,34,1) 0%, rgba(51,51,51,1) 100%);
+            border-left: 1px solid var(--bg-tertiary);
+            border-top: 1px solid var(--bg-tertiary);
+            border-right: 1px solid var(--bg-secondary);
+            border-bottom: 1px solid var(--bg-secondary);
+            box-shadow: 0 0 2px 2px rgb(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="wheel">
+            <button class="button-wheel" id="ArrowUp">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="m283-345-43-43 240-240 240 239-43 43-197-197-197 198Z"/></svg>
+            </button>
+            <button class="button-wheel" id="Enter">OK</button>
+            <button class="button-wheel" id="ArrowDown">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-345 240-585l43-43 197 198 197-197 43 43-240 239Z"/></svg>
+            </button>
+        </div>
+        <div class="button-row">
+            <button class="button-small" id="Escape">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M480-160 160-480l320-320 42 42-248 248h526v60H274l248 248-42 42Z"/></svg>
+            </button>
+            <button class="button-small" id="g">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M350-220h470v-137H350v137ZM140-603h150v-137H140v137Zm0 187h150v-127H140v127Zm0 196h150v-137H140v137Zm210-196h470v-127H350v127Zm0-187h470v-137H350v137ZM140-160q-24 0-42-18t-18-42v-520q0-24 18-42t42-18h680q24 0 42 18t18 42v520q0 24-18 42t-42 18H140Z"/></svg>
+            </button>
+            <button class="button-small" id="i">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M479.911-700Q451-700 430.5-720.589q-20.5-20.588-20.5-49.5Q410-799 430.589-819.5q20.588-20.5 49.5-20.5Q509-840 529.5-819.411q20.5 20.588 20.5 49.5Q550-741 529.411-720.5q-20.588 20.5-49.5 20.5ZM430-120v-480h100v480H430Z"/></svg>
+            </button>
+            <button class="button-small" id="s">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M796-121 533-384q-30 26-69.959 40.5T378-329q-108.162 0-183.081-75Q120-479 120-585t75-181q75-75 181.5-75t181 75Q632-691 632-584.85 632-542 618-502q-14 40-42 75l264 262-44 44ZM377-389q81.25 0 138.125-57.5T572-585q0-81-56.875-138.5T377-781q-82.083 0-139.542 57.5Q180-666 180-585t57.458 138.5Q294.917-389 377-389Z"/></svg>
+            </button>
+        </div>
+    </main>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+        import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyB5M61LyQp9RFLfLpOCzHGWCEmgPt0RRCE",
+            authDomain: "remote-abc04.firebaseapp.com",
+            databaseURL: "https://remote-abc04-default-rtdb.firebaseio.com",
+            projectId: "remote-abc04",
+            storageBucket: "remote-abc04.appspot.com",
+            messagingSenderId: "495061313070",
+            appId: "1:495061313070:web:394614d7846a8f165361bf"
+        };
+
+        const app = initializeApp(firebaseConfig);
+
+        const database = getDatabase(app);
+
+        const broadcastInput = (input) => {
+            set(ref(database, 'input'), {
+                key: input,
+                timestamp: new Date() * 1
+            });
+        }
+
+        Array.from(document.querySelectorAll('button')).forEach(button => {
+            button.addEventListener('click', e => {
+                broadcastInput(e.target.id);
+            });
+        });
+    </script>
+</body>
+</html>
